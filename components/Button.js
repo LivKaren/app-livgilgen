@@ -5,17 +5,17 @@ export default function Button({ label, theme, onPress }) {
   if (theme === "primary") {
     return (
       <View style={[styles.buttonContainer, { borderWidth: 4, borderColor: "white", borderRadius: 18 }]}>
-        <Pressable
-          style={[styles.button, { backgroundColor: "lavender" }]}
-          onPress={() => alert('You pressed a button.')}
-        >
+        <Pressable style={[styles.button, { borderWidth: 4,backgroundColor: '#E6E6FA', borderColor: "#ffd33d", borderRadius: 18 }]} 
+        onPress={onPress}
+      
+       >
           <FontAwesome
             name="picture-o"
             size={18}
-            color="#25292e"
+            color="black"
             style={styles.buttonIcon}
           />
-          <Text style={[styles.buttonLabel, { color: "white" }]}>{label}</Text>
+          <Text style={[styles.buttonLabel, { color: "black" }]}>{label}</Text>
         </Pressable>
       </View>
     );
@@ -24,7 +24,7 @@ export default function Button({ label, theme, onPress }) {
   return (
     <View style={styles.buttonContainer}>
    <Pressable
-          style={[styles.button, { backgroundColor: '#fff' }]}
+          style={[styles.button, { backgroundColor: '#E6E6FA' }]}
           onPress={onPress}
         />
      
